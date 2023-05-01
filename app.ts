@@ -1,7 +1,7 @@
 import {serve} from "https://deno.land/std@0.177.0/http/server.ts";
 
 const port = Number(Deno.env.get("PORT") ?? 8080);
-const license: string = Deno.env.get('LICENSE')
+const license: string = '';//Deno.env.get('LICENSE')
 serve(handler, {port});
 
 function handler(req: Request): Response {
