@@ -5,7 +5,12 @@ const license: string = '';//Deno.env.get('LICENSE')
 serve(handler, {port});
 
 function handler(req: Request): Response {
-    console.log(Deno.env)
+    console.log(Deno.env.has('LICENSE') ? Deno.env.get('LICENSE') : "No License Found")
+    try {
+        console.log(Deno.env.toObject())
+    }catch (e) {
+        console.log(e)
+    }
     return new Response(html(), {
         status: 200,
         headers: headers(),
