@@ -10,6 +10,7 @@ function handler(req: Request): Response {
         status: 200,
         headers: headers(),
     });
+
 }
 
 function html() {
